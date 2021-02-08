@@ -1,7 +1,9 @@
 package com.example.crudmysql.model;
 
+import com.sun.istack.NotNull;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.lang.NonNull;
 
 import javax.persistence.*;
 

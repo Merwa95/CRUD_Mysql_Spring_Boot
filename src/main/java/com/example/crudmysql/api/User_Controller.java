@@ -18,18 +18,18 @@ public class User_Controller {
        return user_service.getUsers();
     }
     //get one user
-    @GetMapping(value="/{id}")
+    @GetMapping(value="/user")
     public User getUser(@PathVariable("id") Long id){
         return user_service.getUser(id);
     }
     //ajouter un user
-    @PostMapping
+    @PostMapping(value = "/addUser")
     public User addUser(@RequestBody User user) {
         return user_service.addUser(user);
     }
 
     //delete un user
-    @DeleteMapping(value = "/{id}")
+    @DeleteMapping(value = "/deleteUser")
     public void delete(@PathVariable("id") long id){
         user_service.delete(id);
     }
