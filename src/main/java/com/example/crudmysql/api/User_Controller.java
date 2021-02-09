@@ -2,6 +2,7 @@ package com.example.crudmysql.api;
 
 import com.example.crudmysql.model.User;
 import com.example.crudmysql.service.User_logic;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,6 +15,7 @@ public class User_Controller {
     private User_logic user_service;
     //getUsers
     @GetMapping(value="/users")
+    @ApiOperation(value = "Finds all users")
     public List<User> getUsers(){
        return user_service.getUsers();
     }
